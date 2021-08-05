@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210805 18:46:45.774" rpa="false">
+<suite id="s1" name="辖区考核" source="D:\Program Files\JetBrains\PyCharm Community Edition 2020.2\Robot-Project\辖区考核.robot">
+<test id="s1-t1" name="eventAcceptance # 事件受理统计表">
+<kw name="Open Workbook" library="ExcellentLibrary">
+<doc>Opens the workbook found at the given file path.
+_NOTE_: Please note that at present _XLS_ files are not supported.</doc>
+<arguments>
+<arg>F:\\test.xlsx</arg>
+</arguments>
+<status status="PASS" starttime="20210805 18:46:46.258" endtime="20210805 18:46:46.272"></status>
+</kw>
+<kw name="Get Column Count" library="ExcellentLibrary">
+<doc>Returns the number of non-empty columns in the active sheet.</doc>
+<assign>
+<var>${column_count}</var>
+</assign>
+<msg timestamp="20210805 18:46:46.272" level="INFO">${column_count} = 6</msg>
+<status status="PASS" starttime="20210805 18:46:46.272" endtime="20210805 18:46:46.272"></status>
+</kw>
+<kw name="Get Row Count" library="ExcellentLibrary">
+<doc>Returns the number of non-empty rows in the active sheet.</doc>
+<assign>
+<var>${row_count}</var>
+</assign>
+<msg timestamp="20210805 18:46:46.273" level="INFO">${row_count} = 7</msg>
+<status status="PASS" starttime="20210805 18:46:46.272" endtime="20210805 18:46:46.273"></status>
+</kw>
+<kw name="Read Sheet Data" library="ExcellentLibrary">
+<doc>Reads all the data from the active sheet.</doc>
+<arguments>
+<arg>cell_range=A1:G7</arg>
+</arguments>
+<assign>
+<var>${data_sheet}</var>
+</assign>
+<msg timestamp="20210805 18:46:46.273" level="INFO">${data_sheet} = [['emergencyTypeId', 'createBeginTime', 'createEndTime', 'emergencyTypeQueryId', 'startTime', 'endTime', None], [None, '2021-2-1', '2021-2-28', 2, '2021-7-1', '2021-7-31', None], [11, '2021-2-1', '202...</msg>
+<status status="PASS" starttime="20210805 18:46:46.273" endtime="20210805 18:46:46.273"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>${data_sheet}</arg>
+</arguments>
+<msg timestamp="20210805 18:46:46.273" level="INFO">[['emergencyTypeId', 'createBeginTime', 'createEndTime', 'emergencyTypeQueryId', 'startTime', 'endTime', None], [None, '2021-2-1', '2021-2-28', 2, '2021-7-1', '2021-7-31', None], [11, '2021-2-1', '2021-2-28', None, '2021-6-1', '2021-7-31', None], [18, '2021-4-1', '2021-6-30', None, '2021-5-1', '2021-7-31', None], [29, '2021-5-1', '2021-5-31', None, '2021-2-1', '2021-2-28', None], [45, '2021-7-1', '2021-7-31', None, '2021-4-1', '2021-8-28', None], [60, '2021-8-1', '2021-8-31', None, '2021-8-1', '2021-8-28', None]]</msg>
+<status status="PASS" starttime="20210805 18:46:46.273" endtime="20210805 18:46:46.273"></status>
+</kw>
+<kw name="${x} IN RANGE [ 1 | ${row_count} ]" type="for">
+<kw name="${x} = 1" type="foritem">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${data_sheet[${x}][4]}</arg>
+</arguments>
+<assign>
+<var>${startTime}</var>
+</assign>
+<msg timestamp="20210805 18:46:46.274" level="INFO">${startTime} = 2021-7-1</msg>
+<status status="PASS" starttime="20210805 18:46:46.274" endtime="20210805 18:46:46.274"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${startTime}</arg>
+</arguments>
+<msg timestamp="20210805 18:46:46.274" level="INFO">2021-7-1</msg>
+<status status="PASS" starttime="20210805 18:46:46.274" endtime="20210805 18:46:46.274"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${data_sheet[${x}][5]}</arg>
+</arguments>
+<assign>
+<var>${endTime}</var>
+</assign>
+<msg timestamp="20210805 18:46:46.274" level="INFO">${endTime} = 2021-7-31</msg>
+<status status="PASS" starttime="20210805 18:46:46.274" endtime="20210805 18:46:46.274"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${endTime}</arg>
+</arguments>
+<msg timestamp="20210805 18:46:46.275" level="INFO">2021-7-31</msg>
+<status status="PASS" starttime="20210805 18:46:46.275" endtime="20210805 18:46:46.275"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type=application/x-www-form-urlencoded</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20210805 18:46:46.275" level="INFO">${header} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
+<status status="PASS" starttime="20210805 18:46:46.275" endtime="20210805 18:46:46.275"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>orgPostId=531</arg>
+<arg>startTime=${startTime}</arg>
+<arg>endTime=${endTime}</arg>
+</arguments>
+<assign>
+<var>${data}</var>
+</assign>
+<msg timestamp="20210805 18:46:46.276" level="INFO">${data} = {'orgPostId': '531', 'startTime': '2021-7-1', 'endTime': '2021-7-31'}</msg>
+<status status="PASS" starttime="20210805 18:46:46.275" endtime="20210805 18:46:46.276"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>emergencyList</arg>
+<arg>${server}</arg>
+<arg>headers=${header}</arg>
+</arguments>
+<msg timestamp="20210805 18:46:46.276" level="INFO">Creating Session using : alias=emergencyList, url=http://sqwytst.wt.com:14352/smart_community_information, headers={'Content-Type': 'application/x-www-form-urlencoded'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210805 18:46:46.276" endtime="20210805 18:46:46.276"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${data_sheet[${Y}][6]}</arg>
+</arguments>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20210805 18:46:46.277" level="FAIL">Variable '${Y}' not found.</msg>
+<status status="FAIL" starttime="20210805 18:46:46.276" endtime="20210805 18:46:46.277"></status>
+</kw>
+<status status="FAIL" starttime="20210805 18:46:46.274" endtime="20210805 18:46:46.277"></status>
+</kw>
+<status status="FAIL" starttime="20210805 18:46:46.273" endtime="20210805 18:46:46.277"></status>
+</kw>
+<status status="FAIL" starttime="20210805 18:46:46.257" endtime="20210805 18:46:46.277" critical="yes">Variable '${Y}' not found.</status>
+</test>
+<test id="s1-t2" name="eventTypeAcceptance # 事件上报类型统计表">
+<kw name="Open Workbook" library="ExcellentLibrary">
+<doc>Opens the workbook found at the given file path.
+_NOTE_: Please note that at present _XLS_ files are not supported.</doc>
+<arguments>
+<arg>F:\\test.xlsx</arg>
+</arguments>
+<msg timestamp="20210805 18:46:46.292" level="FAIL">AliasAlreadyInUseException: The alias `F:\test.xlsx' is already in use by another workbook.</msg>
+<status status="FAIL" starttime="20210805 18:46:46.278" endtime="20210805 18:46:46.292"></status>
+</kw>
+<status status="FAIL" starttime="20210805 18:46:46.277" endtime="20210805 18:46:46.292" critical="yes">AliasAlreadyInUseException: The alias `F:\test.xlsx' is already in use by another workbook.</status>
+</test>
+<test id="s1-t3" name="gridStaffEmergencyAcceptanceRankingResp">
+<kw name="Open Workbook" library="ExcellentLibrary">
+<doc>Opens the workbook found at the given file path.
+_NOTE_: Please note that at present _XLS_ files are not supported.</doc>
+<arguments>
+<arg>F:\\test.xlsx</arg>
+</arguments>
+<msg timestamp="20210805 18:46:46.306" level="FAIL">AliasAlreadyInUseException: The alias `F:\test.xlsx' is already in use by another workbook.</msg>
+<status status="FAIL" starttime="20210805 18:46:46.293" endtime="20210805 18:46:46.306"></status>
+</kw>
+<status status="FAIL" starttime="20210805 18:46:46.292" endtime="20210805 18:46:46.306" critical="yes">AliasAlreadyInUseException: The alias `F:\test.xlsx' is already in use by another workbook.</status>
+</test>
+<test id="s1-t4" name="inspection">
+<kw name="Open Workbook" library="ExcellentLibrary">
+<doc>Opens the workbook found at the given file path.
+_NOTE_: Please note that at present _XLS_ files are not supported.</doc>
+<arguments>
+<arg>F:\\test.xlsx</arg>
+</arguments>
+<msg timestamp="20210805 18:46:46.319" level="FAIL">AliasAlreadyInUseException: The alias `F:\test.xlsx' is already in use by another workbook.</msg>
+<status status="FAIL" starttime="20210805 18:46:46.307" endtime="20210805 18:46:46.319"></status>
+</kw>
+<status status="FAIL" starttime="20210805 18:46:46.306" endtime="20210805 18:46:46.320" critical="yes">AliasAlreadyInUseException: The alias `F:\test.xlsx' is already in use by another workbook.</status>
+</test>
+<test id="s1-t5" name="inspectionRanking">
+<kw name="Open Workbook" library="ExcellentLibrary">
+<doc>Opens the workbook found at the given file path.
+_NOTE_: Please note that at present _XLS_ files are not supported.</doc>
+<arguments>
+<arg>F:\\test.xlsx</arg>
+</arguments>
+<msg timestamp="20210805 18:46:46.334" level="FAIL">AliasAlreadyInUseException: The alias `F:\test.xlsx' is already in use by another workbook.</msg>
+<status status="FAIL" starttime="20210805 18:46:46.320" endtime="20210805 18:46:46.334"></status>
+</kw>
+<status status="FAIL" starttime="20210805 18:46:46.320" endtime="20210805 18:46:46.334" critical="yes">AliasAlreadyInUseException: The alias `F:\test.xlsx' is already in use by another workbook.</status>
+</test>
+<test id="s1-t6" name="personnelVisit">
+<kw name="Open Workbook" library="ExcellentLibrary">
+<doc>Opens the workbook found at the given file path.
+_NOTE_: Please note that at present _XLS_ files are not supported.</doc>
+<arguments>
+<arg>F:\\test.xlsx</arg>
+</arguments>
+<msg timestamp="20210805 18:46:46.349" level="FAIL">AliasAlreadyInUseException: The alias `F:\test.xlsx' is already in use by another workbook.</msg>
+<status status="FAIL" starttime="20210805 18:46:46.335" endtime="20210805 18:46:46.349"></status>
+</kw>
+<status status="FAIL" starttime="20210805 18:46:46.334" endtime="20210805 18:46:46.349" critical="yes">AliasAlreadyInUseException: The alias `F:\test.xlsx' is already in use by another workbook.</status>
+</test>
+<status status="FAIL" starttime="20210805 18:46:45.776" endtime="20210805 18:46:46.349"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6">Critical Tests</stat>
+<stat pass="0" fail="6">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="6" id="s1" name="辖区考核">辖区考核</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
