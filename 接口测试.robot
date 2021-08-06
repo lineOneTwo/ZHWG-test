@@ -15,18 +15,16 @@ ${server}          http://${host}/smart_community_information
 *** Test Cases ***
 post #post接口
 
-    Open workbook    F:\\emergency.xlsx
+    Open workbook    F:\\post.xlsx
     ${column_count}	  get column count	#读取表格中列数
     ${row_count}   get_row_count  #读取表格中行数
     ${data_sheet}   Read sheet data    cell_range=A1:D3  # 读取表中选定区域数据
     log many    ${data_sheet}
     FOR    ${x}    IN RANGE     1   ${row_count}   # 从第二行开始取值
-#       ${emergencyTypeId}    set_variable    ${data_sheet[${x}][0]}   # 从第一列开始取值
-#       Log    ${emergencyTypeId}
-       ${DATA}    set_variable    ${data_sheet[${x}][2]}
-       Log    ${DATA}
        ${URL}    set_variable    ${data_sheet[${x}][1]}
        Log    ${URL}
+       ${DATA}    set_variable    ${data_sheet[${x}][2]}
+       Log    ${DATA}
        ${RESULT}    set_variable    ${data_sheet[${x}][3]}
        Log    ${RESULT}
     ${header}  Create Dictionary   Content-Type=application/x-www-form-urlencoded
@@ -45,19 +43,15 @@ post #post接口
 
 get #post接口
 
-    Open workbook    F:\\emergency.xlsx
+    Open workbook    F:\\get.xlsx
     ${column_count}	  get column count	#读取表格中列数
     ${row_count}   get_row_count  #读取表格中行数
     ${data_sheet}   Read sheet data    cell_range=A1:D3  # 读取表中选定区域数据
     log many    ${data_sheet}
     FOR    ${x}    IN RANGE     1   ${row_count}   # 从第二行开始取值
-#       ${emergencyTypeId}    set_variable    ${data_sheet[${x}][0]}   # 从第一列开始取值
-#       Log    ${emergencyTypeId}
-       ${DATA}    set_variable    ${data_sheet[${x}][2]}
-       Log    ${DATA}
        ${URL}    set_variable    ${data_sheet[${x}][1]}
        Log    ${URL}
-       ${RESULT}    set_variable    ${data_sheet[${x}][3]}
+       ${RESULT}    set_variable    ${data_sheet[${x}][2]}
        Log    ${RESULT}
     ${header}  Create Dictionary   Content-Type=application/x-www-form-urlencoded
     Log    ${DATA}
