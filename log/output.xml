@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210806 11:11:13.213" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210806 11:13:41.356" rpa="false">
 <suite id="s1" name="接口测试" source="D:\Program Files\JetBrains\PyCharm Community Edition 2020.2\Robot-Project\接口测试.robot">
 <test id="s1-t1" name="post #post接口">
 <kw name="Open Workbook" library="ExcellentLibrary">
@@ -8,23 +8,23 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <arguments>
 <arg>F:\\post.xlsx</arg>
 </arguments>
-<status status="PASS" starttime="20210806 11:11:13.812" endtime="20210806 11:11:13.826"></status>
+<status status="PASS" starttime="20210806 11:13:41.956" endtime="20210806 11:13:41.970"></status>
 </kw>
 <kw name="Get Column Count" library="ExcellentLibrary">
 <doc>Returns the number of non-empty columns in the active sheet.</doc>
 <assign>
 <var>${column_count}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.826" level="INFO">${column_count} = 4</msg>
-<status status="PASS" starttime="20210806 11:11:13.826" endtime="20210806 11:11:13.826"></status>
+<msg timestamp="20210806 11:13:41.970" level="INFO">${column_count} = 4</msg>
+<status status="PASS" starttime="20210806 11:13:41.970" endtime="20210806 11:13:41.970"></status>
 </kw>
 <kw name="Get Row Count" library="ExcellentLibrary">
 <doc>Returns the number of non-empty rows in the active sheet.</doc>
 <assign>
 <var>${row_count}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.826" level="INFO">${row_count} = 3</msg>
-<status status="PASS" starttime="20210806 11:11:13.826" endtime="20210806 11:11:13.826"></status>
+<msg timestamp="20210806 11:13:41.970" level="INFO">${row_count} = 3</msg>
+<status status="PASS" starttime="20210806 11:13:41.970" endtime="20210806 11:13:41.970"></status>
 </kw>
 <kw name="Read Sheet Data" library="ExcellentLibrary">
 <doc>Reads all the data from the active sheet.</doc>
@@ -34,16 +34,16 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${data_sheet}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.827" level="INFO">${data_sheet} = [['NO', 'URL', 'DATA', 'RESULT'], [1, '/search/emergency/1/10', 'userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%2...</msg>
-<status status="PASS" starttime="20210806 11:11:13.826" endtime="20210806 11:11:13.827"></status>
+<msg timestamp="20210806 11:13:41.971" level="INFO">${data_sheet} = [['NO', 'URL', 'DATA', 'RESULT'], [1, '/search/emergency/1/10', 'userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%2...</msg>
+<status status="PASS" starttime="20210806 11:13:41.970" endtime="20210806 11:13:41.971"></status>
 </kw>
 <kw name="Log Many" library="BuiltIn">
 <doc>Logs the given messages as separate entries using the INFO level.</doc>
 <arguments>
 <arg>${data_sheet}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.827" level="INFO">[['NO', 'URL', 'DATA', 'RESULT'], [1, '/search/emergency/1/10', 'userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%20&amp;orgId=100&amp;orgSubsetCode=%20&amp;ifThisOrg=', 200], [2, '/statisticalQuery/emergencyCompletionRate', 'createBeginTime=2018-02-01&amp;createEndTime=2018-02-28&amp;emergencyTypeId=11&amp;emergencyTypeQueryId=&amp;queryId=129&amp;queryIdType=&amp;basicId=129', 200]]</msg>
-<status status="PASS" starttime="20210806 11:11:13.827" endtime="20210806 11:11:13.827"></status>
+<msg timestamp="20210806 11:13:41.971" level="INFO">[['NO', 'URL', 'DATA', 'RESULT'], [1, '/search/emergency/1/10', 'userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%20&amp;orgId=100&amp;orgSubsetCode=%20&amp;ifThisOrg=', 200], [2, '/statisticalQuery/emergencyCompletionRate', 'createBeginTime=2018-02-01&amp;createEndTime=2018-02-28&amp;emergencyTypeId=11&amp;emergencyTypeQueryId=&amp;queryId=129&amp;queryIdType=&amp;basicId=129', 200]]</msg>
+<status status="PASS" starttime="20210806 11:13:41.971" endtime="20210806 11:13:41.971"></status>
 </kw>
 <kw name="${x} IN RANGE [ 1 | ${row_count} ]" type="for">
 <kw name="${x} = 1" type="foritem">
@@ -55,16 +55,16 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${URL}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.827" level="INFO">${URL} = /search/emergency/1/10</msg>
-<status status="PASS" starttime="20210806 11:11:13.827" endtime="20210806 11:11:13.827"></status>
+<msg timestamp="20210806 11:13:41.971" level="INFO">${URL} = /search/emergency/1/10</msg>
+<status status="PASS" starttime="20210806 11:13:41.971" endtime="20210806 11:13:41.971"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.828" level="INFO">/search/emergency/1/10</msg>
-<status status="PASS" starttime="20210806 11:11:13.828" endtime="20210806 11:11:13.828"></status>
+<msg timestamp="20210806 11:13:41.972" level="INFO">/search/emergency/1/10</msg>
+<status status="PASS" starttime="20210806 11:13:41.972" endtime="20210806 11:13:41.972"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -74,16 +74,16 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${DATA}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.828" level="INFO">${DATA} = userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%20&amp;orgId=100&amp;orgSubsetCode=%20&amp;ifThisOrg=</msg>
-<status status="PASS" starttime="20210806 11:11:13.828" endtime="20210806 11:11:13.828"></status>
+<msg timestamp="20210806 11:13:41.972" level="INFO">${DATA} = userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%20&amp;orgId=100&amp;orgSubsetCode=%20&amp;ifThisOrg=</msg>
+<status status="PASS" starttime="20210806 11:13:41.972" endtime="20210806 11:13:41.972"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${DATA}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.828" level="INFO">userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%20&amp;orgId=100&amp;orgSubsetCode=%20&amp;ifThisOrg=</msg>
-<status status="PASS" starttime="20210806 11:11:13.828" endtime="20210806 11:11:13.828"></status>
+<msg timestamp="20210806 11:13:41.972" level="INFO">userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%20&amp;orgId=100&amp;orgSubsetCode=%20&amp;ifThisOrg=</msg>
+<status status="PASS" starttime="20210806 11:13:41.972" endtime="20210806 11:13:41.972"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -93,16 +93,16 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${RESULT}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.829" level="INFO">${RESULT} = 200</msg>
-<status status="PASS" starttime="20210806 11:11:13.828" endtime="20210806 11:11:13.829"></status>
+<msg timestamp="20210806 11:13:41.973" level="INFO">${RESULT} = 200</msg>
+<status status="PASS" starttime="20210806 11:13:41.972" endtime="20210806 11:13:41.973"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${RESULT}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.829" level="INFO">200</msg>
-<status status="PASS" starttime="20210806 11:11:13.829" endtime="20210806 11:11:13.829"></status>
+<msg timestamp="20210806 11:13:41.973" level="INFO">200</msg>
+<status status="PASS" starttime="20210806 11:13:41.973" endtime="20210806 11:13:41.973"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -112,16 +112,16 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${header}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.829" level="INFO">${header} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
-<status status="PASS" starttime="20210806 11:11:13.829" endtime="20210806 11:11:13.829"></status>
+<msg timestamp="20210806 11:13:41.973" level="INFO">${header} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
+<status status="PASS" starttime="20210806 11:13:41.973" endtime="20210806 11:13:41.973"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${DATA}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.830" level="INFO">userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%20&amp;orgId=100&amp;orgSubsetCode=%20&amp;ifThisOrg=</msg>
-<status status="PASS" starttime="20210806 11:11:13.829" endtime="20210806 11:11:13.830"></status>
+<msg timestamp="20210806 11:13:41.974" level="INFO">userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%20&amp;orgId=100&amp;orgSubsetCode=%20&amp;ifThisOrg=</msg>
+<status status="PASS" starttime="20210806 11:13:41.974" endtime="20210806 11:13:41.974"></status>
 </kw>
 <kw name="Create Session" library="RequestsLibrary">
 <doc>Create Session: create a HTTP session to a server</doc>
@@ -130,8 +130,8 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <arg>http://sqwytst.wt.com:14352/smart_community_information</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.830" level="INFO">Creating Session using : alias=emergencyList, url=http://sqwytst.wt.com:14352/smart_community_information, headers={'Content-Type': 'application/x-www-form-urlencoded'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20210806 11:11:13.830" endtime="20210806 11:11:13.830"></status>
+<msg timestamp="20210806 11:13:41.974" level="INFO">Creating Session using : alias=emergencyList, url=http://sqwytst.wt.com:14352/smart_community_information, headers={'Content-Type': 'application/x-www-form-urlencoded'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210806 11:13:41.974" endtime="20210806 11:13:41.974"></status>
 </kw>
 <kw name="Post On Session" library="RequestsLibrary">
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
@@ -143,34 +143,34 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.860" level="INFO">POST Request : url=http://sqwytst.wt.com:14352/smart_community_information/search/emergency/1/10 
+<msg timestamp="20210806 11:13:42.006" level="INFO">POST Request : url=http://sqwytst.wt.com:14352/smart_community_information/search/emergency/1/10 
  path_url=/smart_community_information/search/emergency/1/10 
  headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '175'} 
  body=userAcceptance=0&amp;userId=201&amp;pageNum=1&amp;count=10&amp;startDate=%20&amp;endDate=%20&amp;emergencyStatus=0&amp;emergencyTypeOneId=%20&amp;emergencyTypeTwoId=%20&amp;orgId=100&amp;orgSubsetCode=%20&amp;ifThisOrg= 
  </msg>
-<msg timestamp="20210806 11:11:13.860" level="INFO">POST Response : url=http://sqwytst.wt.com:14352/smart_community_information/search/emergency/1/10 
+<msg timestamp="20210806 11:13:42.006" level="INFO">POST Response : url=http://sqwytst.wt.com:14352/smart_community_information/search/emergency/1/10 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'content-type': 'application/json;charset=UTF-8', 'transfer-encoding': 'chunked', 'date': 'Fri, 06 Aug 2021 03:11:11 GMT', 'connection': 'close'} 
+ headers={'X-Powered-By': 'Express', 'content-type': 'application/json;charset=UTF-8', 'transfer-encoding': 'chunked', 'date': 'Fri, 06 Aug 2021 03:13:39 GMT', 'connection': 'close'} 
  body={"code":200,"message":"request successful","data":{"pageSize":10,"totalRows":348,"totalPages":35,"currentPage":1,"startIndex":0,"lastIndex":10,"resultList":[{"emergencyId":"3990828836238","emergencySource":"智慧社区","emergencyTypeId":"45","emergencyTypeCodeDesc":"宣传工作","emergencyTypeDetails":"宣传工作","emergencyTitle":"疫苗接种","orgTreePath":"100_4031_4882_4903","orgTreePathDetails":"平城区_古城街道_雁塔社区_雁塔社区第一网格","citizenName":"刘丹","citizenPhone":"18404966189","citizenAddress":"中国山西省大同市平城区古城街道大东街155号","emergencyContent":"入户商铺，询问全员疫苗接种情况，发放“全员接种，请放心”标识","createTime":"2021-08-06 10:08:28","handlerPeople":"刘丹","emergencyStatus":"0","emergencyStatusDesc":"待处理","startTime":null,"stopTime":null,"emergencyFileList":null,"sort":null},{"emergencyId":"5584320884117","emergencySource":"智慧社区","emergencyTypeId":"13","emergencyTypeCodeDesc":"风险隐患-道路交通安全","emergencyTypeDetails":"道路交通安全","emergencyTitle":"安全巡查","orgTreePath":"100_4031_4881_4902","orgTreePathDetails":"平城区_古城街道_鼓楼社区_鼓楼社区第一网格","citizenName":"孙文艳","citizenPhone":"15386826345","citizenAddress":"鼓楼东街年轮酒吧","emergencyContent":"鼓楼东街一席饭店对面的房顶上，砖瓦松动，已出现掉落现象，给过往居民的出行带来危险。","createTime":"2021-08-06 10:01:17","handlerPeople":"孙文艳","emergencyStatus":"0","emergencyStatusDesc":"待处理","startTime":null,"stopTime":null,"emergencyFileList":null,"sort":null},{"emergencyId":"8289368880304","emergencySource":"智慧社区","emergencyTypeId":"60","emergencyTypeCodeDesc":"其他事件","emergencyTypeDetails":"其他事件","emergencyTitle":"社区工作人员提醒接种新冠疫苗","orgTreePath":"100_4030_4060_4158","orgTreePathDetails":"平城区_迎宾街道_万城社区_万城社区第一网格","citizenName":"宋强丽","citizenPhone":"13754909555","citizenAddress":"中国山西省大同市平城区迎宾街道云中路","emergencyContent":"社区工作人员排查小区外围商铺，提醒工作人员接种新冠疫苗。","createTime":"2021-08-06 09:47:15","handlerPeople":"宋强丽","emergencyStatus":"0","emergencyStatusDesc":"待处理","startTime":null,"stopTime":null,"emergencyFileList":null,"sort":null},{"emergencyId":"6810250617690","emergencySource":"智慧社区","emergencyTypeId":"55","emergencyTypeCodeDesc":"风险隐患-其他","emergencyTypeDetails":"其他","emergencyTitle":"东大门不能正常关闭","orgTreePath":"100_4030_4060_4158","orgTreePathDetails":"平城区_迎宾街道_万城社区_万城社区第一网格","citizenName":"宋强丽","citizenPhone":"13754909555","citizenAddress":"中国山西省大同市平城区迎宾街道云中路","emergencyContent":"排查发现小区东大门系统损坏，不能正常关闭。与物业沟通后，物业派专人已经维修好。","createTime":"2021-08-06 09:35:56","handlerPeople":"宋强丽","emergencyStatus":"0","emergencyStatusDesc":"待处理","startTime":null,"stopTime":null,"emergencyFileList":null,"sort":null},{"emergencyId":"2516877200772","emergencySource":"智慧社区","emergencyTypeId":"59","emergencyTypeCodeDesc":"宣传工作-其他","emergencyTypeDetails":"其他","emergencyTitle":"宣传新冠疫苗接种","orgTreePath":"100_3239_3263","orgTreePathDetails":"平城区_新旺街道_御锦源社区","citizenName":"田娅娜","citizenPhone":"15935293150","citizenAddress":"中国山西省大同市平城区永泰街道向阳街","emergencyContent":"在辖区内大力宣传新冠疫苗接种，筑牢安全屏障。","createTime":"2021-08-06 09:28:48","handlerPeople":"田娅娜","emergencyStatus":"0","emergencyStatusDesc":"待处理","startTime":null,"stopTime":null,"emergencyFileList":null,"sort":null},{"emergencyId":"0074727175574","emergencySource":"智慧社区","emergencyTypeId":"59","emergencyTypeCodeDesc":"宣传工作-其他","emergencyTypeDetails":"其他","emergencyTitle":"继续宣传疫苗接种","orgTreePath":"100_3239_3263","orgTreePathDetails":"平城区_新旺街道_御锦源社区","citizenName":"吴霞","citizenPhone":"13653522234","citizenAddress":"山西省大同市平城区御河西路靠近御锦源北区","emergencyContent":"继续宣传疫苗接种","createTime":"2021-08-06 09:27:15","handlerPeople":"吴霞","emergencyStatus":"0","emergencyStatusDesc":"待处理","startTime":null,"stopTime":null,"emergencyFileList":null,"sort":null},{"emergencyId":"5833955430589","emergencySource":"智慧社区","emergencyTypeId":"56","emergencyTypeCodeDesc":"治安问题-其他","emergencyTypeDetails":"其他","emergencyTitle":"茶叶街车辆乱停","orgTreePath":"100_3239_3308_3861","orgTreePathDetails":"平城区_新旺街道_安信社区_安信社区第八网格","citizenName":"于垠","citizenPhone":"18306812367","citizenAddress":"山西省大同市平城区魏都大道靠近东信广场","emergencyContent":"茶叶街车辆乱停乱放","createTime":"2021-08-06 09:23:09","handlerPeople":"于垠","emergencyStatus":"0","emergencyStatusDesc":"待处理","startTime":null,"stopTime":null,"emergencyFileList":null,"sort":null},{"emergencyId":"6204285565267","emergencySource":"智慧社区","emergencyTypeId":"60","emergencyTypeCodeDesc":"其他事件","emergencyTypeDetails":"其他事件","emergencyTitle":"宣传疫苗接种","orgTreePath":"100_3239_3263","orgTreePathDetails":"平城区_新旺街道_御锦源社区","citizenName":"武强","citizenPhone":"18003527877","citizenAddress":"山西省大同市平城区御河西路靠近御锦源北区","emergencyContent":"为推进疫苗接种，网格员在辖区内排查未接种疫苗人群","createTime":"2021-08-06 09:19:16","handlerPeople":"武强","emergencyStatus":"0","emergencyStatusDesc":"待处理","startTime":null,"stopTime":null,"emergencyFileList":null,"sort":null},{"emergencyId":"7185302260964","emergencySource":"智慧社区","emergencyTypeId":"60","emergencyTypeCodeDesc":"其他事件","emergencyTypeDetails":"其他事件","emergencyTitle":"疫情防控","orgTreePath":"100_3239_3263","orgTreePathDetails":"平城区_新旺街道_御锦源社区","citizenName":"武强","citizenPhone":"18003527877","citizenAddress":"山西省大同市平城区御河西路靠近御锦源北区","emergencyContent":"疫情形势严峻，辖区内居民佩戴口罩不自觉","createTime":"2021-08-06 09:16:16","handlerPeople":"武强","emergencyStatus":"0","emergencyStatusDesc":"待处理","startTime":null,"stopTime":null,"emergencyFileList":null,"sort":null},{"emergencyId":"9750773635206","emergencySource":"智慧社区","emergencyTypeId":"17","emergencyTypeCodeDesc":"风险隐患-环境卫生","emergencyTypeDetails":"环境卫生","emergencyTitle":"20号楼一单元前堆放垃圾","orgTreePath":"100_3255_3262_3722","orgTreePathDetails":"平城区_鹿苑街道_站东社区_站东社区第三网格","citizenName":"郭倩","citizenPhone":"18303425424","citizenAddress":"山西省大同市平城区北苑路靠近南官房","emergencyContent":"堆放施工垃圾","createTime":"2021-08-06 09:04:34","handlerPeople":"郭倩","emergencyStatus":"0","emergencyStatusDesc":"待处理","startTime":null,"stopTime":null,"emergencyFileList":null,"sort":null}]}} 
  </msg>
-<msg timestamp="20210806 11:11:13.861" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210806 11:11:13.830" endtime="20210806 11:11:13.861"></status>
+<msg timestamp="20210806 11:13:42.007" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210806 11:13:41.974" endtime="20210806 11:13:42.007"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.status_code}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.861" level="INFO">200</msg>
-<status status="PASS" starttime="20210806 11:11:13.861" endtime="20210806 11:11:13.861"></status>
+<msg timestamp="20210806 11:13:42.007" level="INFO">200</msg>
+<status status="PASS" starttime="20210806 11:13:42.007" endtime="20210806 11:13:42.007"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.json}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.861" level="INFO">&lt;bound method Response.json of &lt;Response [200]&gt;&gt;</msg>
-<status status="PASS" starttime="20210806 11:11:13.861" endtime="20210806 11:11:13.861"></status>
+<msg timestamp="20210806 11:13:42.007" level="INFO">&lt;bound method Response.json of &lt;Response [200]&gt;&gt;</msg>
+<status status="PASS" starttime="20210806 11:13:42.007" endtime="20210806 11:13:42.007"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -178,7 +178,7 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <arg>${resp.status_code}</arg>
 <arg>${RESULT}</arg>
 </arguments>
-<status status="PASS" starttime="20210806 11:11:13.862" endtime="20210806 11:11:13.862"></status>
+<status status="PASS" starttime="20210806 11:13:42.007" endtime="20210806 11:13:42.008"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -186,9 +186,9 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <arg>${resp.json()['message']}</arg>
 <arg>request successful</arg>
 </arguments>
-<status status="PASS" starttime="20210806 11:11:13.862" endtime="20210806 11:11:13.862"></status>
+<status status="PASS" starttime="20210806 11:13:42.008" endtime="20210806 11:13:42.008"></status>
 </kw>
-<status status="PASS" starttime="20210806 11:11:13.827" endtime="20210806 11:11:13.862"></status>
+<status status="PASS" starttime="20210806 11:13:41.971" endtime="20210806 11:13:42.008"></status>
 </kw>
 <kw name="${x} = 2" type="foritem">
 <kw name="Set Variable" library="BuiltIn">
@@ -199,16 +199,16 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${URL}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.863" level="INFO">${URL} = /statisticalQuery/emergencyCompletionRate</msg>
-<status status="PASS" starttime="20210806 11:11:13.862" endtime="20210806 11:11:13.863"></status>
+<msg timestamp="20210806 11:13:42.009" level="INFO">${URL} = /statisticalQuery/emergencyCompletionRate</msg>
+<status status="PASS" starttime="20210806 11:13:42.008" endtime="20210806 11:13:42.009"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.863" level="INFO">/statisticalQuery/emergencyCompletionRate</msg>
-<status status="PASS" starttime="20210806 11:11:13.863" endtime="20210806 11:11:13.863"></status>
+<msg timestamp="20210806 11:13:42.009" level="INFO">/statisticalQuery/emergencyCompletionRate</msg>
+<status status="PASS" starttime="20210806 11:13:42.009" endtime="20210806 11:13:42.009"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -218,16 +218,16 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${DATA}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.863" level="INFO">${DATA} = createBeginTime=2018-02-01&amp;createEndTime=2018-02-28&amp;emergencyTypeId=11&amp;emergencyTypeQueryId=&amp;queryId=129&amp;queryIdType=&amp;basicId=129</msg>
-<status status="PASS" starttime="20210806 11:11:13.863" endtime="20210806 11:11:13.863"></status>
+<msg timestamp="20210806 11:13:42.009" level="INFO">${DATA} = createBeginTime=2018-02-01&amp;createEndTime=2018-02-28&amp;emergencyTypeId=11&amp;emergencyTypeQueryId=&amp;queryId=129&amp;queryIdType=&amp;basicId=129</msg>
+<status status="PASS" starttime="20210806 11:13:42.009" endtime="20210806 11:13:42.009"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${DATA}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.863" level="INFO">createBeginTime=2018-02-01&amp;createEndTime=2018-02-28&amp;emergencyTypeId=11&amp;emergencyTypeQueryId=&amp;queryId=129&amp;queryIdType=&amp;basicId=129</msg>
-<status status="PASS" starttime="20210806 11:11:13.863" endtime="20210806 11:11:13.864"></status>
+<msg timestamp="20210806 11:13:42.009" level="INFO">createBeginTime=2018-02-01&amp;createEndTime=2018-02-28&amp;emergencyTypeId=11&amp;emergencyTypeQueryId=&amp;queryId=129&amp;queryIdType=&amp;basicId=129</msg>
+<status status="PASS" starttime="20210806 11:13:42.009" endtime="20210806 11:13:42.009"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -237,16 +237,16 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${RESULT}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.864" level="INFO">${RESULT} = 200</msg>
-<status status="PASS" starttime="20210806 11:11:13.864" endtime="20210806 11:11:13.864"></status>
+<msg timestamp="20210806 11:13:42.010" level="INFO">${RESULT} = 200</msg>
+<status status="PASS" starttime="20210806 11:13:42.010" endtime="20210806 11:13:42.010"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${RESULT}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.864" level="INFO">200</msg>
-<status status="PASS" starttime="20210806 11:11:13.864" endtime="20210806 11:11:13.864"></status>
+<msg timestamp="20210806 11:13:42.010" level="INFO">200</msg>
+<status status="PASS" starttime="20210806 11:13:42.010" endtime="20210806 11:13:42.010"></status>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
@@ -256,16 +256,16 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${header}</var>
 </assign>
-<msg timestamp="20210806 11:11:13.864" level="INFO">${header} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
-<status status="PASS" starttime="20210806 11:11:13.864" endtime="20210806 11:11:13.864"></status>
+<msg timestamp="20210806 11:13:42.010" level="INFO">${header} = {'Content-Type': 'application/x-www-form-urlencoded'}</msg>
+<status status="PASS" starttime="20210806 11:13:42.010" endtime="20210806 11:13:42.010"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${DATA}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.865" level="INFO">createBeginTime=2018-02-01&amp;createEndTime=2018-02-28&amp;emergencyTypeId=11&amp;emergencyTypeQueryId=&amp;queryId=129&amp;queryIdType=&amp;basicId=129</msg>
-<status status="PASS" starttime="20210806 11:11:13.865" endtime="20210806 11:11:13.865"></status>
+<msg timestamp="20210806 11:13:42.011" level="INFO">createBeginTime=2018-02-01&amp;createEndTime=2018-02-28&amp;emergencyTypeId=11&amp;emergencyTypeQueryId=&amp;queryId=129&amp;queryIdType=&amp;basicId=129</msg>
+<status status="PASS" starttime="20210806 11:13:42.010" endtime="20210806 11:13:42.011"></status>
 </kw>
 <kw name="Create Session" library="RequestsLibrary">
 <doc>Create Session: create a HTTP session to a server</doc>
@@ -274,8 +274,8 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <arg>http://sqwytst.wt.com:14352/smart_community_information</arg>
 <arg>headers=${header}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:13.865" level="INFO">Creating Session using : alias=emergencyList, url=http://sqwytst.wt.com:14352/smart_community_information, headers={'Content-Type': 'application/x-www-form-urlencoded'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20210806 11:11:13.865" endtime="20210806 11:11:13.865"></status>
+<msg timestamp="20210806 11:13:42.011" level="INFO">Creating Session using : alias=emergencyList, url=http://sqwytst.wt.com:14352/smart_community_information, headers={'Content-Type': 'application/x-www-form-urlencoded'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210806 11:13:42.011" endtime="20210806 11:13:42.011"></status>
 </kw>
 <kw name="Post On Session" library="RequestsLibrary">
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
@@ -287,34 +287,34 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${resp}</var>
 </assign>
-<msg timestamp="20210806 11:11:14.240" level="INFO">POST Request : url=http://sqwytst.wt.com:14352/smart_community_information/statisticalQuery/emergencyCompletionRate 
+<msg timestamp="20210806 11:13:42.473" level="INFO">POST Request : url=http://sqwytst.wt.com:14352/smart_community_information/statisticalQuery/emergencyCompletionRate 
  path_url=/smart_community_information/statisticalQuery/emergencyCompletionRate 
  headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '129'} 
  body=createBeginTime=2018-02-01&amp;createEndTime=2018-02-28&amp;emergencyTypeId=11&amp;emergencyTypeQueryId=&amp;queryId=129&amp;queryIdType=&amp;basicId=129 
  </msg>
-<msg timestamp="20210806 11:11:14.241" level="INFO">POST Response : url=http://sqwytst.wt.com:14352/smart_community_information/statisticalQuery/emergencyCompletionRate 
+<msg timestamp="20210806 11:13:42.473" level="INFO">POST Response : url=http://sqwytst.wt.com:14352/smart_community_information/statisticalQuery/emergencyCompletionRate 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Express', 'content-type': 'application/json;charset=UTF-8', 'transfer-encoding': 'chunked', 'date': 'Fri, 06 Aug 2021 03:11:11 GMT', 'connection': 'close'} 
+ headers={'X-Powered-By': 'Express', 'content-type': 'application/json;charset=UTF-8', 'transfer-encoding': 'chunked', 'date': 'Fri, 06 Aug 2021 03:13:39 GMT', 'connection': 'close'} 
  body={"code":200,"message":"request successful","data":[{"discCodeDesc":"永泰街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"古城街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"新旺街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"马军营街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"白登山街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"文瀛湖街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"水泊寺街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"小南头街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"清远街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"武定街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"鹿苑街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"振华街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"迎宾街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"新华街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"卧虎湾街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"御河街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"开源街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null},{"discCodeDesc":"大庆路街道","emergencyCompletionRateNumSort":0.0,"emergencyCompletionRateNum":"0.00%","sort":null}]} 
  </msg>
-<msg timestamp="20210806 11:11:14.241" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20210806 11:11:13.865" endtime="20210806 11:11:14.241"></status>
+<msg timestamp="20210806 11:13:42.473" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210806 11:13:42.011" endtime="20210806 11:13:42.473"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.status_code}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:14.241" level="INFO">200</msg>
-<status status="PASS" starttime="20210806 11:11:14.241" endtime="20210806 11:11:14.241"></status>
+<msg timestamp="20210806 11:13:42.474" level="INFO">200</msg>
+<status status="PASS" starttime="20210806 11:13:42.474" endtime="20210806 11:13:42.474"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${resp.json}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:14.241" level="INFO">&lt;bound method Response.json of &lt;Response [200]&gt;&gt;</msg>
-<status status="PASS" starttime="20210806 11:11:14.241" endtime="20210806 11:11:14.241"></status>
+<msg timestamp="20210806 11:13:42.474" level="INFO">&lt;bound method Response.json of &lt;Response [200]&gt;&gt;</msg>
+<status status="PASS" starttime="20210806 11:13:42.474" endtime="20210806 11:13:42.474"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -322,7 +322,7 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <arg>${resp.status_code}</arg>
 <arg>${RESULT}</arg>
 </arguments>
-<status status="PASS" starttime="20210806 11:11:14.242" endtime="20210806 11:11:14.242"></status>
+<status status="PASS" starttime="20210806 11:13:42.474" endtime="20210806 11:13:42.475"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -330,17 +330,17 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <arg>${resp.json()['message']}</arg>
 <arg>request successful</arg>
 </arguments>
-<status status="PASS" starttime="20210806 11:11:14.242" endtime="20210806 11:11:14.242"></status>
+<status status="PASS" starttime="20210806 11:13:42.475" endtime="20210806 11:13:42.475"></status>
 </kw>
-<status status="PASS" starttime="20210806 11:11:13.862" endtime="20210806 11:11:14.242"></status>
+<status status="PASS" starttime="20210806 11:13:42.008" endtime="20210806 11:13:42.475"></status>
 </kw>
-<status status="PASS" starttime="20210806 11:11:13.827" endtime="20210806 11:11:14.242"></status>
+<status status="PASS" starttime="20210806 11:13:41.971" endtime="20210806 11:13:42.475"></status>
 </kw>
 <kw name="Close Workbook" library="ExcellentLibrary">
 <doc>Closes the workbook identified by the supplied alias.</doc>
-<status status="PASS" starttime="20210806 11:11:14.242" endtime="20210806 11:11:14.242"></status>
+<status status="PASS" starttime="20210806 11:13:42.475" endtime="20210806 11:13:42.475"></status>
 </kw>
-<status status="PASS" starttime="20210806 11:11:13.811" endtime="20210806 11:11:14.242" critical="yes"></status>
+<status status="PASS" starttime="20210806 11:13:41.955" endtime="20210806 11:13:42.475" critical="yes"></status>
 </test>
 <test id="s1-t2" name="get #post接口">
 <kw name="Open Workbook" library="ExcellentLibrary">
@@ -349,23 +349,23 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <arguments>
 <arg>F:\\get.xlsx</arg>
 </arguments>
-<status status="PASS" starttime="20210806 11:11:14.243" endtime="20210806 11:11:14.256"></status>
+<status status="PASS" starttime="20210806 11:13:42.476" endtime="20210806 11:13:42.489"></status>
 </kw>
 <kw name="Get Column Count" library="ExcellentLibrary">
 <doc>Returns the number of non-empty columns in the active sheet.</doc>
 <assign>
 <var>${column_count}</var>
 </assign>
-<msg timestamp="20210806 11:11:14.256" level="INFO">${column_count} = 3</msg>
-<status status="PASS" starttime="20210806 11:11:14.256" endtime="20210806 11:11:14.256"></status>
+<msg timestamp="20210806 11:13:42.489" level="INFO">${column_count} = 3</msg>
+<status status="PASS" starttime="20210806 11:13:42.489" endtime="20210806 11:13:42.489"></status>
 </kw>
 <kw name="Get Row Count" library="ExcellentLibrary">
 <doc>Returns the number of non-empty rows in the active sheet.</doc>
 <assign>
 <var>${row_count}</var>
 </assign>
-<msg timestamp="20210806 11:11:14.257" level="INFO">${row_count} = 1</msg>
-<status status="PASS" starttime="20210806 11:11:14.256" endtime="20210806 11:11:14.257"></status>
+<msg timestamp="20210806 11:13:42.489" level="INFO">${row_count} = 1</msg>
+<status status="PASS" starttime="20210806 11:13:42.489" endtime="20210806 11:13:42.489"></status>
 </kw>
 <kw name="Read Sheet Data" library="ExcellentLibrary">
 <doc>Reads all the data from the active sheet.</doc>
@@ -375,27 +375,27 @@ _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
 <assign>
 <var>${data_sheet}</var>
 </assign>
-<msg timestamp="20210806 11:11:14.257" level="INFO">${data_sheet} = [['NO', 'URL', 'RESULT', None]]</msg>
-<status status="PASS" starttime="20210806 11:11:14.257" endtime="20210806 11:11:14.257"></status>
+<msg timestamp="20210806 11:13:42.490" level="INFO">${data_sheet} = [['NO', 'URL', 'RESULT', None]]</msg>
+<status status="PASS" starttime="20210806 11:13:42.490" endtime="20210806 11:13:42.490"></status>
 </kw>
 <kw name="Log Many" library="BuiltIn">
 <doc>Logs the given messages as separate entries using the INFO level.</doc>
 <arguments>
 <arg>${data_sheet}</arg>
 </arguments>
-<msg timestamp="20210806 11:11:14.257" level="INFO">[['NO', 'URL', 'RESULT', None]]</msg>
-<status status="PASS" starttime="20210806 11:11:14.257" endtime="20210806 11:11:14.257"></status>
+<msg timestamp="20210806 11:13:42.490" level="INFO">[['NO', 'URL', 'RESULT', None]]</msg>
+<status status="PASS" starttime="20210806 11:13:42.490" endtime="20210806 11:13:42.490"></status>
 </kw>
 <kw name="${x} IN RANGE [ 1 | ${row_count} ]" type="for">
-<status status="PASS" starttime="20210806 11:11:14.257" endtime="20210806 11:11:14.257"></status>
+<status status="PASS" starttime="20210806 11:13:42.490" endtime="20210806 11:13:42.490"></status>
 </kw>
 <kw name="Close Workbook" library="ExcellentLibrary">
 <doc>Closes the workbook identified by the supplied alias.</doc>
-<status status="PASS" starttime="20210806 11:11:14.257" endtime="20210806 11:11:14.258"></status>
+<status status="PASS" starttime="20210806 11:13:42.490" endtime="20210806 11:13:42.490"></status>
 </kw>
-<status status="PASS" starttime="20210806 11:11:14.243" endtime="20210806 11:11:14.258" critical="yes"></status>
+<status status="PASS" starttime="20210806 11:13:42.476" endtime="20210806 11:13:42.491" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20210806 11:11:13.214" endtime="20210806 11:11:14.258"></status>
+<status status="PASS" starttime="20210806 11:13:41.357" endtime="20210806 11:13:42.491"></status>
 </suite>
 <statistics>
 <total>

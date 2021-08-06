@@ -9,8 +9,8 @@ Library           string
 Library           JSONLibrary
 
 *** Variables ***
-${host}         sqwytst.wt.com:14352
-${server}          http://${host}/smart_community_information
+${server}          http://sqwytst.wt.com:14352/smart_community_information
+#${server}          http://sqwy.wt.com:5130/smart_community_information_correct
 
 *** Test Cases ***
 post #post接口
