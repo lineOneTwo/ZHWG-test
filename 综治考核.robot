@@ -8,8 +8,8 @@ Library           HttpLibrary
 Library           string
 *** Variables ***
 
-${server}       http://sqwytst.wt.com:14352/smart_community_information/
-#${server}          http://sqwy.wt.com:5130/smart_community_information_correct
+#${server}       http://sqwytst.wt.com:14352/smart_community_information/
+${server}          http://sqwy.wt.com:5130/smart_community_information_correct
 
 *** Test Cases ***
 eventTypeInformation # 事件类型详情分析表
@@ -27,7 +27,7 @@ eventTypeInformation # 事件类型详情分析表
        ${endTime}    set_variable    ${data_sheet[${x}][5]}
        Log    ${endTime}
        ${header}  Create Dictionary   Content-Type=application/x-www-form-urlencoded
-       ${data}    Create Dictionary   orgPostId=531   startTime=${startTime}   endTime=${endTime}
+       ${data}    Create Dictionary   orgPostId=531   startTime=${startTime}   endTime=${endTime}   disTreeCode=129
        Create Session  emergencyList  ${server}     headers=${header}
        # 发送请求
        ${resp}   post on session  emergencyList   /comprehensive/eventTypeInformation    ${data}
@@ -54,7 +54,7 @@ eventType  #事件类型分析表
        ${endTime}    set_variable    ${data_sheet[${x}][5]}
        Log    ${endTime}
        ${header}  Create Dictionary   Content-Type=application/x-www-form-urlencoded
-       ${data}    Create Dictionary   orgPostId=531   startTime=${startTime}   endTime=${endTime}
+       ${data}    Create Dictionary   orgPostId=531   startTime=${startTime}   endTime=${endTime}   disTreeCode=129
        Create Session  emergencyList  ${server}    headers=${header}
        # 发送请求
        ${resp}   post on session  emergencyList   /comprehensive/eventType    ${data}
@@ -79,7 +79,7 @@ export  # 导出
        ${endTime}    set_variable    ${data_sheet[${x}][5]}
        Log    ${endTime}
        ${header}  Create Dictionary   Content-Type=application/x-www-form-urlencoded
-       ${data}    Create Dictionary   orgPostId=531   startTime=${startTime}   endTime=${endTime}
+       ${data}    Create Dictionary   orgPostId=531   startTime=${startTime}   endTime=${endTime}   disTreeCode=129
        Create Session  emergencyList  ${server}    headers=${header}
     # 发送请求
        ${resp}   post on session  emergencyList   /comprehensive/eventTypeInformation/export   ${data}
